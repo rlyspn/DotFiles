@@ -6,9 +6,20 @@ set smartindent
 set autoindent
 set number
 set ruler
+set smartcase
+set hlsearch
+set incsearch
+set ic
+
 filetype on
 syntax enable
 syntax on
+
+if winwidth(0) > 84
+    let g:gitgutter_enabled = 1
+else
+    let g:gitgutter_enabled = 0
+endif
 
 set background=dark
 if has("gui_running")
@@ -35,6 +46,9 @@ imap <C-a> <esc>0i
 autocmd BufEnter ?akefile* set noet ts=8 sw=8
 autocmd BufEnter */debian/rules set noet ts=8 sw=8
 
+autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
+autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
+
 autocmd BufRead *.md setlocal spell spelllang=en_us
 autocmd BufRead *.tex setlocal spell spelllang=en_us
 autocmd BufRead *.txt setlocal spell spelllang=en_us
@@ -43,16 +57,8 @@ autocmd BufRead *.txt setlocal spell spelllang=en_us
 "autocmd BufRead *.md setlocal textwidth=80
 "
 
-autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
-autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
-
 let vimclojure#FuzzyIndent=1
 let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
-"let vimclojure#WantNailgun = 1
-"let vimclojure#NailgunClient = $HOME . "/.vim/lib/vimclojure-nailgun-client/ng"
-
-"autocmd BufRead *.c setl tabstop=8 noexpandtab
-"autocmd BufRead *.h setl tabstop=8 noexpandtab
