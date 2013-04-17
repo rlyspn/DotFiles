@@ -11,9 +11,15 @@ set hlsearch
 set incsearch
 set ic
 
+set foldmethod=syntax
+set foldlevel=20
+au FileType python setlocal foldmethod=indent
+
 filetype on
+filetype plugin on
 syntax enable
 syntax on
+highlight SpellBad term=underline
 
 if winwidth(0) > 84
     let g:gitgutter_enabled = 1
@@ -21,13 +27,10 @@ else
     let g:gitgutter_enabled = 0
 endif
 
+color solarized
+let g:solarized_termtrans = 1
 set background=dark
-if has("gui_running")
-    color solarized
-else
-    color elflord
-endif
-"color solarized
+
 set sts=4 sw=4 ts=4 expandtab
 
 nmap j gj
@@ -49,13 +52,16 @@ autocmd BufEnter */debian/rules set noet ts=8 sw=8
 autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
 autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
-autocmd BufRead *.md setlocal spell spelllang=en_us
+"autocmd BufRead *.md setlocal spell spelllang=en_us
 autocmd BufRead *.tex setlocal spell spelllang=en_us
-autocmd BufRead *.txt setlocal spell spelllang=en_us
+"autocmd BufRead *.txt setlocal spell spelllang=en_us
 
 "autocmd BufRead *.txt setlocal textwidth=80 
 "autocmd BufRead *.md setlocal textwidth=80
 "
+
+hi clear SpellBad
+hi SpellBad cterm=undercurl
 
 let vimclojure#FuzzyIndent=1
 let vimclojure#HighlightBuiltins=1
