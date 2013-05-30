@@ -14,6 +14,7 @@ set ic
 set foldmethod=syntax
 set foldlevel=20
 au FileType python setlocal foldmethod=indent
+au FileType perl setlocal foldmethod=marker
 
 filetype on
 filetype plugin on
@@ -21,11 +22,12 @@ syntax enable
 syntax on
 highlight SpellBad term=underline
 
-if winwidth(0) > 84
-    let g:gitgutter_enabled = 1
-else
-    let g:gitgutter_enabled = 0
-endif
+"if winwidth(0) > 84
+"    let g:gitgutter_enabled = 1
+"else
+"    let g:gitgutter_enabled = 0
+"endif
+let g:gitgutter_enabled = 0
 
 color solarized
 let g:solarized_termtrans = 1
@@ -52,7 +54,7 @@ autocmd BufEnter */debian/rules set noet ts=8 sw=8
 autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
 autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
-"autocmd BufRead *.md setlocal spell spelllang=en_us
+autocmd BufRead *.md setlocal spell spelllang=en_us
 autocmd BufRead *.tex setlocal spell spelllang=en_us
 "autocmd BufRead *.txt setlocal spell spelllang=en_us
 
