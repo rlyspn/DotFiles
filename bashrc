@@ -77,17 +77,23 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias igrep='egrep -i --color=auto'
 fi
 
 # some more aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -l --color=auto'
+alias l='ls -l -h --color=auto'
 alias gp='git pull'
 alias gc='git commit -a -m'
 alias ipy='ipython'
 alias p='python'
 alias v='vagrant'
+
+export PATH="$HOME/repos/adt-bundle-linux-x86_64/sdk/tools:$PATH"
+export PATH="$HOME/repos/adt-bundle-linux-x86_64/sdk/platform-tools:$PATH"
+export PATH="$HOME/repos/android-ndk-r8e/toolchains/x86-4.4.3/prebuilt/linux-x86_64/bin:$PATH"
+export CROSS_COMPILE=i686-linux-android-
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -112,3 +118,6 @@ fi
 #add storm to path
 #export PATH=/usr/local/storm-0.7.2/bin:$PATH
 export PATH=/opt/vagrant/bin:$PATH
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source $HOME/perl5/perlbrew/etc/bashrc
