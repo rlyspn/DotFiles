@@ -1,18 +1,20 @@
+SYM=ln -s
+RM=rm
 
 deploy: bashrc vim terminator
 
 bash: bashrc
 	echo "Deploying bashrc."
-	cp bashrc ~/.bashrc
+	$(SYM) bashrc ~/.bashrc
 
 vim: vimrc vim
 	echo "Deploying vimrc."
-	cp vimrc .vimrc
+	$(SYM) vimrc .vimrc
 	echo "Deploying .vim directory."
-	rm -r ~/.vim 
-	cp -r vim ~/.vim
+	$(RM) -r ~/.vim 
+	$(SYM) -r vim ~/.vim
 
 terminator: terminator
 	echo "Deploying terminator config."
 	mkdir ~/.config/terminator
-	cp terminator ~/.config/terminator/config
+	$(SYM) terminator ~/.config/terminator/config
