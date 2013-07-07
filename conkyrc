@@ -5,7 +5,7 @@
 use_spacer yes
 
 # set to yes if you want conky to be forked in the background
-background no
+background yes
 
 use_xft yes
 
@@ -57,7 +57,7 @@ default_shade_color black
 default_outline_color DarkGrey
 
 # Text alignment, other possible values are commented
-alignment top_left
+alignment tl
 #alignment top_right
 #alignment bottom_left
 #alignment bottom_right

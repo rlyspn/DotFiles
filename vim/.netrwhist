@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/riley/Columbia/research/encos/encos_code/encos/src/android/packages/apps/EncOSTests/src/edu/columbia/cs/encos'
+let g:netrw_dirhist_2='/home/riley/Columbia/research/encos/encos_code/encos/src/android/packages/apps/EncOSTests/src/edu/columbia/cs'
+let g:netrw_dirhist_3='/home/riley/Columbia/research/encos/encos_code/encos/src/android/packages/apps/EncOSTests/res/layout'
+let g:netrw_dirhist_4='/home/riley/Columbia/research/encos/encos_code/encos/src/android/frameworks/base/core/java/android/database/sqlite'
+let g:netrw_dirhist_5='/home/riley/Columbia/research/encos/encos_code/encos/src/android/packages/apps/EncOSTests/res/layout'
+let g:netrw_dirhist_6='/home/riley/repos/resumator/lib/resumator'

@@ -81,14 +81,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more aliases
+alias l='ls -l -h --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -l -h --color=auto'
 alias gp='git pull'
 alias gc='git commit -a -m'
 alias ipy='ipython'
 alias p='python'
-alias v='vagrant'
 
 export PATH="$HOME/repos/adt-bundle-linux-x86_64/sdk/tools:$PATH"
 export PATH="$HOME/repos/adt-bundle-linux-x86_64/sdk/platform-tools:$PATH"
@@ -116,8 +115,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 #add storm to path
-#export PATH=/usr/local/storm-0.7.2/bin:$PATH
 export PATH=/opt/vagrant/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/bin
 source $HOME/perl5/perlbrew/etc/bashrc
+
+source $HOME/btsync/scripts/alias.sh

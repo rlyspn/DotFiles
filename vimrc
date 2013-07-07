@@ -11,13 +11,13 @@ set hlsearch
 set incsearch
 set ic
 
-set foldmethod=syntax
-set foldlevel=20
-au FileType python setlocal foldmethod=indent
-au FileType perl setlocal foldmethod=marker
+"set foldmethod=syntax
+"set foldlevel=20
+"au FileType python setlocal foldmethod=indent
 
 filetype on
 filetype plugin on
+filetype indent on
 syntax enable
 syntax on
 highlight SpellBad term=underline
@@ -31,6 +31,7 @@ let g:gitgutter_enabled = 0
 
 color solarized
 let g:solarized_termtrans = 1
+set t_Co=16
 set background=dark
 
 set sts=4 sw=4 ts=4 expandtab
@@ -51,8 +52,8 @@ imap <C-a> <esc>0i
 autocmd BufEnter ?akefile* set noet ts=8 sw=8
 autocmd BufEnter */debian/rules set noet ts=8 sw=8
 
-autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
-autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
+"autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
+"autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
 autocmd BufRead *.md setlocal spell spelllang=en_us
 autocmd BufRead *.tex setlocal spell spelllang=en_us
