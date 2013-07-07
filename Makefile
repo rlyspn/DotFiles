@@ -3,18 +3,18 @@ RM=rm
 
 deploy: bashrc vim terminator
 
-bash: bashrc
+bash:
 	echo "Deploying bashrc."
 	$(SYM) bashrc ~/.bashrc
 
-vim: vimrc vim
+vim:
 	echo "Deploying vimrc."
 	$(SYM) vimrc .vimrc
 	echo "Deploying .vim directory."
 	$(RM) -r ~/.vim 
 	$(SYM) -r vim ~/.vim
 
-terminator: terminator
+terminator:
 	echo "Deploying terminator config."
 	mkdir ~/.config/terminator
 	$(SYM) terminator ~/.config/terminator/config
