@@ -7,6 +7,13 @@ call pathogen#helptags()
 set smartindent
 set autoindent
 
+" No menus or scrollbars.
+set guioptions-=m
+set guioptions-=R
+set guioptions-=r
+set guioptions-=L
+set guioptions-=l
+
 "" Case insensitive unless searching capital
 set smartcase
 set hlsearch
@@ -36,13 +43,15 @@ au FileType java setlocal nofoldenable
 
 let g:gitgutter_enabled = 1
 
+set sts=4 sw=4 ts=4 expandtab
+
 "" Set up Color
 color solarized
 let g:solarized_termtrans = 1
 set t_Co=16
 set background=dark
 set guioptions-=T
-set sts=4 sw=4 ts=4 expandtab
+""autocmd BufRead,BufNewFile *.md color elflord
 
 let Tlist_WinWidth = 40
 
@@ -58,7 +67,6 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.aidl set filetype=java
 
 "" Set up Python Flake8
-"autocmd BufWritePost *.py call Flake8()
 let g:flake8_max_line_length=99
 let g:syntastic_python_checkers = ['flake8']
 imap <C-e> <esc>$<right>i
@@ -76,12 +84,10 @@ au FileType cpp setl sw=2 sts=2 ts=2 et
 "autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
 "" Spell check markdown and tex files.
+hi clear SpellBad
+highlight SpellBad term=underline
 autocmd BufRead *.md setlocal spell spelllang=en_us
 autocmd BufRead *.tex setlocal spell spelllang=en_us
-highlight SpellBad term=underline
-
-hi clear SpellBad
-hi SpellBad cterm=undercurl
 
 "" Nerdtree and Rainbow Parentheses
 autocmd vimenter * NERDTree
@@ -93,6 +99,8 @@ nnoremap <Down> 3<C-w>+
 nnoremap <Left> 3<C-w><
 nnoremap <Right> 3<C-w>>
 
-""====Remap F Keys====
+"" Remap F Keys
 nnoremap <F5> :YRShow<CR>
 nnoremap <F6> :GundoToggle<CR> 
+nnoremap <F7> :set background=light<CR>
+nnoremap <F8> :set background=dark<CR>
