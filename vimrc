@@ -30,8 +30,8 @@ filetype plugin on
 filetype indent on
 syntax enable
 syntax on
+set cc=80
 
-highlight SpellBad term=underline
 
 
 "" Set up folding
@@ -46,8 +46,12 @@ let g:gitgutter_enabled = 1
 set sts=4 sw=4 ts=4 expandtab
 
 "" Set up Color
-color solarized
-let g:solarized_termtrans = 1
+if has('gui_running')
+    color molokai
+else
+    color solarized
+    let g:solarized_termtrans = 1
+endif
 set t_Co=16
 set background=dark
 set guioptions-=T
@@ -65,6 +69,7 @@ au BufRead,BufNewFile *.sage set filetype=python
 au BufRead,BufNewFile *.cuh set filetype=cpp
 au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.aidl set filetype=java
+au BufRead,BufNewFile *.pde set filetype=java
 
 "" Set up Python Flake8
 let g:flake8_max_line_length=99
@@ -76,18 +81,19 @@ imap <C-a> <esc>0i
 autocmd BufEnter ?akefile* set noet ts=8 sw=8
 autocmd BufEnter */debian/rules set noet ts=8 sw=8
 au FileType ruby setl sw=2 sts=2 ts=2 et
+au FileType javascript setl sw=2 sts=2 ts=2 et
 "" I don't really like 2 space indentions but Dalvik does.
-au FileType h setl sw=2 sts=2 ts=2 et
-au FileType c setl sw=2 sts=2 ts=2 et
-au FileType cpp setl sw=2 sts=2 ts=2 et
+"au FileType h setl sw=2 sts=2 ts=2 et
+"au FileType c setl sw=2 sts=2 ts=2 et
+"au FileType cpp setl sw=2 sts=2 ts=2 et
 "autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
 "autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
 "" Spell check markdown and tex files.
 hi clear SpellBad
 highlight SpellBad term=underline
-autocmd BufRead *.md setlocal spell spelllang=en_us
-autocmd BufRead *.tex setlocal spell spelllang=en_us
+autocmd BufRead,BufEnter *.md setlocal spell spelllang=en_us
+autocmd BufRead,BufEnter *.tex setlocal spell spelllang=en_us
 
 "" Nerdtree and Rainbow Parentheses
 autocmd vimenter * NERDTree
