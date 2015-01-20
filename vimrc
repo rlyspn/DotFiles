@@ -31,8 +31,9 @@ filetype indent on
 syntax enable
 syntax on
 set cc=80
-
-
+autocmd BufEnter *.md set cc=0
+autocmd BufEnter *.txt set cc=0
+autocmd BufEnter *.tex set cc=0
 
 "" Set up folding
 set foldmethod=syntax
@@ -55,6 +56,7 @@ endif
 set t_Co=16
 set background=dark
 set guioptions-=T
+
 ""autocmd BufRead,BufNewFile *.md color elflord
 
 let Tlist_WinWidth = 40
@@ -70,6 +72,7 @@ au BufRead,BufNewFile *.cuh set filetype=cpp
 au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.aidl set filetype=java
 au BufRead,BufNewFile *.pde set filetype=java
+au BufRead,BufNewFile *.bats set filetype=sh
 
 "" Set up Python Flake8
 let g:flake8_max_line_length=99
@@ -83,9 +86,9 @@ autocmd BufEnter */debian/rules set noet ts=8 sw=8
 au FileType ruby setl sw=2 sts=2 ts=2 et
 au FileType javascript setl sw=2 sts=2 ts=2 et
 "" I don't really like 2 space indentions but Dalvik does.
-"au FileType h setl sw=2 sts=2 ts=2 et
-"au FileType c setl sw=2 sts=2 ts=2 et
-"au FileType cpp setl sw=2 sts=2 ts=2 et
+au FileType h setl sw=2 sts=2 ts=2 et
+au FileType c setl sw=2 sts=2 ts=2 et
+au FileType cpp setl sw=2 sts=2 ts=2 et
 "autocmd BufRead,BufNewFile,BufEnter *.c set tabstop=8 sts=8 sw=8 noexpandtab
 "autocmd BufRead,BufNewFile,BufEnter *.h set tabstop=8 sts=8 sw=8 noexpandtab
 
