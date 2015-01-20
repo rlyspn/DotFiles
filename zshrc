@@ -52,6 +52,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/home/riley/bin:/home/riley/perl5/perlbrew/bin:/opt/vagrant/bin:/home/riley/repos/android-ndk/toolchains/x86-4.6/prebuilt/linux-x86_64/bin:/home/riley/repos/adt-bundle-linux-x86_64/sdk/platform-tools:/home/riley/repos/adt-bundle-linux-x86_64/sdk/tools:/home/riley/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/riley/.rvm/bin:/home/riley/bin:/home/riley/bin/eclipse:/home/riley/bin/play-2.1.3:/home/riley/repos/helper_scripts"
 export PATH="$HOME/repos/arm-eabi-4.6/bin":$PATH
+export PATH="$HOME/bin/activator/":$PATH
+export PATH="$HOME/bin/helper_scripts/":$PATH
+export PATH="$HOME/bin/bin/":$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -77,6 +80,8 @@ unsetopt share_history
 alias gc='git commit -a -m'
 alias l='ls -l -h --color=auto'
 alias ipy='ipython'
-source .zsh_alias
+alias gno='gnome-open'
+alias ack='ack-grep'
+#source .zsh_alias
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
