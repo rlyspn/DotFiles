@@ -8,7 +8,7 @@ RM=rm
 update:
 	git submodule update --init --recursive
 
-deploy: bashrc vim terminator zsh
+deploy: update bashrc vim terminator zsh
 
 bash: update
 	echo "Deploying bashrc."
