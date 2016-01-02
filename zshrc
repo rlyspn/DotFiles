@@ -82,6 +82,12 @@ alias l='ls -l -h --color=auto'
 alias ipy='ipython'
 alias gno='gnome-open'
 alias ack='ack-grep'
-#source .zsh_alias
+source .zsh_alias
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export GOPATH="$HOME/gocode"
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/bin/sbt/bin:$PATH"
+eval "$(rbenv init -)"
+
+export MAVEN_OPTS="-Xmx8G -XX:MaxPermSize=4G"
