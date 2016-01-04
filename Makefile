@@ -16,7 +16,7 @@ bash: update
 
 vim: update
 	echo "Deploying vimrc."
-	$(CP) vimrc .vimrc
+	$(CP) vimrc ~/.vimrc
 	echo "Deploying .vim directory."
 	$(RM) -rf ~/.vim 
 	$(CP) -r vim ~/.vim
