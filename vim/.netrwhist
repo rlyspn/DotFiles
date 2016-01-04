@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/laxus/Columbia/research/xray/notes'
-let g:netrw_dirhist_2='/home/laxus/.vim/bundle/YankRing.vim'
-let g:netrw_dirhist_3='/home/riley/Columbia/research/encos/encos_src/encos/src/android/packages/apps/EncOSBenchmark/res/layout'
