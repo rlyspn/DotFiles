@@ -73,10 +73,15 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.aidl set filetype=java
 au BufRead,BufNewFile *.pde set filetype=java
 au BufRead,BufNewFile *.bats set filetype=sh
+au BufRead,BufNewFile *.jmd set filetype=markdown
+au BufRead,BufNewFile *.mdw set filetype=markdown
+au BufRead,BufNewFile *.oc set filetype=c
+au BufRead,BufNewFile *.oh set filetype=c
 
 "" Set up Python Flake8
 let g:flake8_max_line_length=99
 let g:syntastic_python_checkers = ['flake8']
+
 imap <C-e> <esc>$<right>i
 imap <C-a> <esc>0i
 
@@ -85,7 +90,6 @@ autocmd BufEnter ?akefile* set noet ts=8 sw=8
 autocmd BufEnter */debian/rules set noet ts=8 sw=8
 au FileType ruby setl sw=2 sts=2 ts=2 et
 au FileType javascript setl sw=2 sts=2 ts=2 et
-"" I don't really like 2 space indentions but Dalvik does.
 au FileType h setl sw=2 sts=2 ts=2 et
 au FileType c setl sw=2 sts=2 ts=2 et
 au FileType cpp setl sw=2 sts=2 ts=2 et

@@ -77,12 +77,10 @@ unsetopt inc_append_history
 unsetopt share_history
 
 # Personal Alias Assignment
-alias gc='git commit -a -m'
 alias l='ls -l -h --color=auto'
 alias ipy='ipython'
 alias gno='gnome-open'
 alias ack='ack-grep'
-source .zsh_alias
 
 export GOPATH="$HOME/gocode"
 export PATH=$PATH:/usr/local/go/bin
