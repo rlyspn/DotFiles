@@ -89,3 +89,5 @@ export PATH="$HOME/bin/sbt/bin:$PATH"
 eval "$(rbenv init -)"
 
 export MAVEN_OPTS="-Xmx8G -XX:MaxPermSize=4G"
+
+export PATH="$HOME/bin/julia/bin:$PATH"
