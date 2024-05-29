@@ -50,11 +50,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/riley/bin:/home/riley/perl5/perlbrew/bin:/opt/vagrant/bin:/home/riley/repos/android-ndk/toolchains/x86-4.6/prebuilt/linux-x86_64/bin:/home/riley/repos/adt-bundle-linux-x86_64/sdk/platform-tools:/home/riley/repos/adt-bundle-linux-x86_64/sdk/tools:/home/riley/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/riley/.rvm/bin:/home/riley/bin:/home/riley/bin/eclipse:/home/riley/bin/play-2.1.3:/home/riley/repos/helper_scripts"
-export PATH="$HOME/repos/arm-eabi-4.6/bin":$PATH
-export PATH="$HOME/bin/activator/":$PATH
-export PATH="$HOME/bin/helper_scripts/":$PATH
-export PATH="$HOME/bin/bin/":$PATH
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/repos/helper_scripts:$PATH"
+export PATH="$HOME/bin/helper_scripts/:$PATH"
+export PATH="$HOME/bin/bin/:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Library/TeX/texbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -79,15 +81,11 @@ unsetopt share_history
 # Personal Alias Assignment
 alias l='ls -l -h --color=auto'
 alias ipy='ipython'
-alias gno='gnome-open'
-alias ack='ack-grep'
 
 export GOPATH="$HOME/gocode"
+#export GOROOT="$HOME/bin/go"
+
 export PATH=$PATH:/usr/local/go/bin
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/bin/sbt/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME:$GOPATH/bin:$PATH"
 
-export MAVEN_OPTS="-Xmx8G -XX:MaxPermSize=4G"
-
-export PATH="$HOME/bin/julia/bin:$PATH"
+export PATH=$PATH:/Users/rileyspahn/Library/Python/3.9/bin
