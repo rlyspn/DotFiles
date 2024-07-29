@@ -80,8 +80,9 @@ unsetopt share_history
 
 # Personal Alias Assignment
 alias l='ls -l -h --color=auto'
-alias ipy='ipython'
+alias ipy='ipython3'
 
+#export GOPATH="$HOME/go"
 export GOPATH="$HOME/gocode"
 #export GOROOT="$HOME/bin/go"
 
@@ -89,3 +90,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME:$GOPATH/bin:$PATH"
 
 export PATH=$PATH:/Users/rileyspahn/Library/Python/3.9/bin
+
+# Add some python.
+source $HOME/venv/bin/activate

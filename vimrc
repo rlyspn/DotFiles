@@ -117,3 +117,6 @@ nnoremap <F5> :YRShow<CR>
 nnoremap <F6> :GundoToggle<CR> 
 nnoremap <F7> :set background=light<CR>
 nnoremap <F8> :set background=dark<CR>
+
+"" Autocomplete go code
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
